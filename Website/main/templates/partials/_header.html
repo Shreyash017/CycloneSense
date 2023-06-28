@@ -1,0 +1,17 @@
+{% load static %}
+<header class="header-container">
+    <div class="website-name">
+        <a href="{% url 'home' %}">
+            <span>Cycl</span>
+            <img class="logo" src="{% static 'img/logo.png' %}" alt="Cycl Logo">
+            <span>neSense</span>
+        </a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'analysis' %}">Analysis</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+        </ul>
+    </nav>
+</header>
