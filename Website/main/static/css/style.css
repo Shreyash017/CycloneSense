@@ -67,6 +67,7 @@ nav ul a:hover {
     text-decoration: underline;
 }
 
+
 /* For Footer */
 .footer-container {
     display: grid;
@@ -93,6 +94,7 @@ nav ul a:hover {
 }
 
 .website-name-white a {
+    width: 220px;
     text-decoration: none;
     color: #FFF;
 }

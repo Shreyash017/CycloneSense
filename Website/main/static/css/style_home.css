@@ -20,22 +20,22 @@
     padding-left: 80px;
     width: 500px;
     color: #FAFAFA;
-    font-size: 36px;
+    font-size: 60px;
     font-weight: 800;
-    line-height: 50px;
+    line-height: 70px;
+    width: 60%;
 }
 
 .cover-content a {
-    width: 100%;
+    width: 280px;
+    height: 60px;
+    margin-top: 40px;
+    margin-left: 80px;
     text-decoration: none;
 }
 
-.cover-content a button {
-    height: 30px;
-    margin-top: 20px;
-    margin-left: 80px;
-    padding-left: 20px;
-    padding-right: 20px;
+.btn {
+    width: 300px;
     height: 60px;
     font-weight: 600;
     border-radius: 10px;
@@ -133,7 +133,6 @@
     color: #626262;
     font-size: 22px;
     font-weight: 700;
-    line-height: 64px;
     display: flex;
     justify-content: center;
     align-items: center;

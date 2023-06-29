@@ -2,5 +2,170 @@
 {% load static %}
 
 {% block content %}
-    <h1 class="ab">Hello About</h1>
+<section class="banner">
+    <div class="banner-content">
+        <h1>Research Papers</h1>
+        <p>Check out the different Research papers that we referred for our project below! </p>
+        <a rel="articles next" href="#reference-articles">
+            <button type="button" class="btn"> Explore Articles </button>
+        </a>
+    </div>
+    <div class="cross-div1"></div>
+    <div class="cross-div2"></div>
+</section>
+
+<section id="reference-articles">
+    <h2 class="refer-head">Reference Articles</h2>
+    <div class="referrences">
+        <div class="refer-item">
+            <h4>Research Paper Name 1</h4>
+            <div>
+                <img src="{% static 'img/pages.png' %}" alt="No. of Pages">
+                <p>15 Pages</p>
+                <a rel="alternate external noopener" href="#" target="_blank">
+                    <img src="{% static 'img/download.png' %}" alt="download">
+                </a>
+            </div>
+            <a rel="alternate external noopener" href="#" target="_blank">
+                <button>Download PDF</button>
+            </a>
+        </div>
+        <div class="refer-item">
+            <h4>Research Paper Name 2</h4>
+            <div>
+                <img src="{% static 'img/pages.png' %}" alt="No. of Pages">
+                <p>15 Pages</p>
+                <a rel="alternate external noopener" href="#" target="_blank">
+                    <img src="{% static 'img/download.png' %}" alt="download">
+                </a>
+            </div>
+            <a rel="alternate external noopener" href="#" target="_blank">
+                <button>Download PDF</button>
+            </a>
+        </div>
+        <div class="refer-item">
+            <h4>Research Paper Name 3</h4>
+            <div>
+                <img src="{% static 'img/pages.png' %}" alt="No. of Pages">
+                <p>15 Pages</p>
+                <a rel="alternate external noopener" href="#" target="_blank">
+                    <img src="{% static 'img/download.png' %}" alt="download">
+                </a>
+            </div>
+            <a rel="alternate external noopener" href="#" target="_blank">
+                <button>Download PDF</button>
+            </a>
+        </div>
+        <div class="refer-item">
+            <h4>Research Paper Name 4</h4>
+            <div>
+                <img src="{% static 'img/pages.png' %}" alt="No. of Pages">
+                <p>15 Pages</p>
+                <a rel="alternate external noopener" href="#" target="_blank">
+                    <img src="{% static 'img/download.png' %}" alt="download">
+                </a>
+            </div>
+            <a rel="alternate external noopener" href="#" target="_blank">
+                <button>Download PDF</button>
+            </a>
+        </div>
+        <div class="refer-item">
+            <h4>Research Paper Name 5</h4>
+            <div>
+                <img src="{% static 'img/pages.png' %}" alt="No. of Pages">
+                <p>15 Pages</p>
+                <a rel="alternate external noopener" href="#" target="_blank">
+                    <img src="{% static 'img/download.png' %}" alt="download">
+                </a>
+            </div>
+            <a rel="alternate external noopener" href="#" target="_blank">
+                <button>Download PDF</button>
+            </a>
+        </div>
+        <div class="refer-item">
+            <h4>Research Paper Name 6</h4>
+            <div>
+                <img src="{% static 'img/pages.png' %}" alt="No. of Pages">
+                <p>15 Pages</p>
+                <a rel="alternate external noopener" href="#" target="_blank">
+                    <img src="{% static 'img/download.png' %}" alt="download">
+                </a>
+            </div>
+            <a rel="alternate external noopener" href="#" target="_blank">
+                <button>Download PDF</button>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="about-our-project">
+    <h2 class="project-head">About our project</h2>
+    <div class="project">
+        <div class="project-content">
+            <h3>You can find the GitHub & kaggle repository of our project below!</h3>
+            <div class="links">
+                <a rel="help noopener" href="https://github.com/Shreyash017/CycloneSense" target="_blank">
+                    <button id="github"> <img src="{% static 'img/github_blackbg.png' %}" alt="GitHub Icon">
+                        GitHub</button>
+                </a>
+                <a rel="help noopener" href="#">
+                    <button id="kaggle">Kaggle<img src="{% static 'img/kaggle.png' %}" alt="Kaggle Link"></button>
+                </a>
+            </div>
+        </div>
+        <div class="project-item"></div>
+    </div>
+</section>
+
+<section id="our-team">
+    <h2 class="team-head">Our Team</h2>
+    <div class="team">
+        <div class="team-members">
+            <div class="photo" id="shreyash"></div>
+            <h4>Shreyash Salunke</h4>
+            <div class="social">
+                <a rel="author noopener" href="https://www.linkedin.com/in/shreyash-salunke" target="_blank">
+                    <img src="{% static 'img/linkedin.png' %}" alt="Shreyash-LinkedIn">
+                </a>
+                <a rel="author noopener" href="https://github.com/Shreyash017" target="_blank">
+                    <img src="{% static 'img/github_whitebg.png' %}" alt="Shreyash-GitHub">
+                </a>
+                <a rel="author noopener" href="mailto: shreyashsalunkesds@gmail.com" target="_blank">
+                    <img id="mail" src="{% static 'img/mail.png' %}" alt="Shreyash-Mail">
+                </a>
+            </div>
+        </div>
+        <div class="team-members">
+            <div class="photo" id="samhita"></div>
+            <h4>Samhita K.R</h4>
+            <div class="social">
+                <a rel="author noopener" href="https://www.linkedin.com/in/samhita-k-r-73773b235" target="_blank">
+                    <img src="{% static 'img/linkedin.png' %}" alt="Samhita-LinkedIn">
+                </a>
+                <a rel="author noopener" href="#" target="_blank">
+                    <img src="{% static 'img/github_whitebg.png' %}" alt="Samhita-GitHub">
+                </a>
+                <a rel="author noopener" href="mailto: krs302002@gmail.com" target="_blank">
+                    <img id="mail" src="{% static 'img/mail.png' %}" alt="Samhita-Mail">
+                </a>
+            </div>
+        </div>
+        <div class="team-members">
+            <div class="photo" id="vedant"></div>
+            <h4>Vedant Bhatkar</h4>
+            <div class="social">
+                <a rel="author noopener" href="https://www.linkedin.com/in/vedant-bhatkar-0052a3249" target="_blank">
+                    <img src="{% static 'img/linkedin.png' %}" alt="Vedant-LinkedIn">
+                </a>
+                <a rel="author noopener" href="https://github.com/VedantBhatkar" target="_blank">
+                    <img src="{% static 'img/github_whitebg.png' %}" alt="Vedant-GitHub">
+                </a>
+                <a rel="author noopener" href="mailto: vedantbhatkar603@gmail.com" target="_blank">
+                    <img id="mail" src="{% static 'img/mail.png' %}" alt="Vedant-Mail">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
 {% endblock %}
