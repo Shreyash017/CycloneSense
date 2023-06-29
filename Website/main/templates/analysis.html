@@ -2,5 +2,25 @@
 {% load static %}
 
 {% block content %}
-    <h1 class="ana">Hello Analysis</h1>
+<section class="input-banner">
+    <div class="input-banner-content">
+        <h1>Find the intensity of Cyclone in a few clicks!</h1>
+        <form action="" method="post">
+            {% csrf_token %}
+            <div id="upload">
+                <img src="{% static 'img/upload.png' %}" alt="Upload Image">
+                <input type="file" name="image" class="file_upload" id="image" accept="image/png, image/jpeg">
+                <div class="sub-btn">
+                    <button type="submit" class="submit">Submit</button>
+                </div>
+            </div>
+            <label for="image">Upload Image</label>
+        </form>
+    </div>
+</section>
+
+<section id="analysis">
+    <h2 class="analysis-head">Analysis</h2>
+
+</section>
 {% endblock %}
