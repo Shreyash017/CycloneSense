@@ -1,2 +1,2 @@
 # CycloneSense
-Deep Learning based Cyclone Intensity Estimation
+Deep Learning Based Cyclone Intensity Estimation.
