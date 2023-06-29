@@ -2,5 +2,72 @@
 {% load static %}
 
 {% block content %}
-    <h1 class="hello">Hello</h1>
+<section class="cover">
+    <div class="cover-content">
+        <h1>Deep Learning based Cyclone Intensity Estimation</h1>
+        <a href="{% url 'analysis' %}">
+            <button type="button" class="btn"> Find Intensity of cyclone </button>
+        </a>
+    </div>
+</section>
+
+<section class="stats">
+    <div>
+        <h3>142,563</h3>
+        <p>Statistics</p>
+    </div>
+    <div>
+        <h3>310,000</h3>
+        <p>Statistics</p>
+    </div>
+    <div id="stats-last">
+        <h3>514,023</h3>
+        <p>Statistics</p>
+    </div>
+</section>
+
+<section class="technologies">
+    <div class="tech tech1 tech-main">
+        <h2>Which technologies are we using?</h2>
+        <p>The project "Deep Learning Based Cyclone Intensity Estimation" leverages Python programming language along
+            with TensorFlow and PyTorch deep learning frameworks. It utilizes satellite imagery datasets for data
+            processing and analysis.</p>
+    </div>
+    <div class="tech">
+        <center>
+            <img class="tech-img" src="{% static 'img/ml.png' %}" alt="ML">
+            <h3>Machine Learning</h3>
+            <p>To analyze historical data.</p>
+        </center>
+    </div>
+    <div class="tech">
+        <center>
+            <img class="tech-img" src="{% static 'img/dl.png' %}" alt="DL">
+            <h3>Deep Learning</h3>
+            <p>To analyze complex patterns.</p>
+        </center>
+    </div>
+    <div class="tech tech1 tech-low">
+        <center>
+            <img class="tech-img" src="{% static 'img/dvorak.png' %}" alt="Dvorak Technique">
+        </center>
+        <h3>Dvorak Technique</h3>
+        <p>By comparing the results of the deep learning model with the Dvorak Technique, the project aims to assess the
+            accuracy and effectiveness of the deep learning approach in cyclone intensity estimation.</p>
+    </div>
+    <div class="tech tech-low">
+        <center>
+            <img class="tech-img" src="{% static 'img/cnn.png' %}" alt="CNN">
+            <h3>CNN</h3>
+            <p>CNNs are employed as the primary deep learning architecture.</p>
+        </center>
+    </div>
+    <div class="tech tech-low">
+        <center>
+            <img class="tech-img" src="{% static 'img/capsule.png' %}" alt="Capsule-CNN">
+            <h3>Capsule N.N</h3>
+            <p>CapsNets are designed to capture spatial relationships</p>
+        </center>
+    </div>
+</section>
 {% endblock %}

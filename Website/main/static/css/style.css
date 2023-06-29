@@ -14,14 +14,14 @@
     grid-gap: 10px;
 }
 
-.website-name {
+.website-name-blue {
     font-size: 30px;
     font-weight: bold;
     margin-top: 35px;
     margin-left: 20px;
 }
 
-.website-name a {
+.website-name-blue a {
     text-decoration: none;
     color: #000000;
 }
@@ -65,7 +65,6 @@ nav ul a:active {
 
 nav ul a:hover {
     text-decoration: underline;
-    text-decoration-thickness: 0.1rem;
 }
 
 /* For Footer */
@@ -75,25 +74,27 @@ nav ul a:hover {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
     width: 100%;
-    height: 270px;
+    height: 400px;
     background: #2860AA;
 }
 
 .item {
-    margin-top: 20px;
+    margin-top: 0px;
     display: grid;
     align-items: center;
     color: #FFF;
 }
 
-.website-logo {
+.website-name-white {
+    font-size: 30px;
+    font-weight: bold;
     grid-column: 1 / 4;
-    padding-left: 40px;
+    padding-left: 20px;
 }
 
-.website-logo a {
+.website-name-white a {
     text-decoration: none;
-    color: #000000;
+    color: #FFF;
 }
 
 .item1 {
@@ -146,10 +147,11 @@ nav ul a:hover {
 }
 
 .item4 {
-    margin-top: 55px;
+    margin-top: 75px;
     grid-column: 1 / 4;
     background-color: #1c4376;
     height: 50px;
     font-weight: 500;
+    font-style: italic;
     justify-content: center;
 }
