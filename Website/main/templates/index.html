@@ -13,17 +13,28 @@
 
 <section class="stats">
     <div>
-        <h3>142,563</h3>
-        <p>Statistics</p>
+        <div class="nums">
+            <h3 class="counter" upto="726">000</h3>
+            <h3>Million</h3>
+        </div>
+        <p>People killed</p>
     </div>
     <div>
-        <h3>310,000</h3>
-        <p>Statistics</p>
+        <div class="nums">
+            <h3>$</h3>
+            <h3 class="counter" upto="573">000</h3>
+            <h3>Billion</h3>
+        </div>
+        <p>Economic loss</p>
     </div>
     <div id="stats-last">
-        <h3>514,023</h3>
-        <p>Statistics</p>
+        <div class="nums">
+            <h3 class="counter" upto="590">000</h3>
+            <h3>+</h3>
+        </div>
+        <p>People migrated</p>
     </div>
+    <script text="text/javascript" src="{% static 'js/stats.js' %}"></script>
 </section>
 
 <section class="technologies">
@@ -34,40 +45,30 @@
             processing and analysis.</p>
     </div>
     <div class="tech">
-        <center>
-            <img class="tech-img" src="{% static 'img/ml.png' %}" alt="ML">
-            <h3>Machine Learning</h3>
-            <p>To analyze historical data.</p>
-        </center>
+        <img class="tech-img" src="{% static 'img/ml.png' %}" alt="ML">
+        <h3>Machine Learning</h3>
+        <p>To analyze historical data.</p>
     </div>
     <div class="tech">
-        <center>
-            <img class="tech-img" src="{% static 'img/dl.png' %}" alt="DL">
-            <h3>Deep Learning</h3>
-            <p>To analyze complex patterns.</p>
-        </center>
+        <img class="tech-img" src="{% static 'img/dl.png' %}" alt="DL">
+        <h3>Deep Learning</h3>
+        <p>To analyze complex patterns.</p>
     </div>
     <div class="tech tech1 tech-low">
-        <center>
-            <img class="tech-img" src="{% static 'img/dvorak.png' %}" alt="Dvorak Technique">
-        </center>
+        <img class="tech-img" src="{% static 'img/dvorak.png' %}" alt="Dvorak Technique">
         <h3>Dvorak Technique</h3>
         <p>By comparing the results of the deep learning model with the Dvorak Technique, the project aims to assess the
             accuracy and effectiveness of the deep learning approach in cyclone intensity estimation.</p>
     </div>
     <div class="tech tech-low">
-        <center>
-            <img class="tech-img" src="{% static 'img/cnn.png' %}" alt="CNN">
-            <h3>CNN</h3>
-            <p>CNNs are employed as the primary deep learning architecture.</p>
-        </center>
+        <img class="tech-img" src="{% static 'img/cnn.png' %}" alt="CNN">
+        <h3>CNN</h3>
+        <p>CNNs are employed as the primary deep learning architecture.</p>
     </div>
     <div class="tech tech-low">
-        <center>
-            <img class="tech-img" src="{% static 'img/capsule.png' %}" alt="Capsule-CNN">
-            <h3>Capsule N.N</h3>
-            <p>CapsNets are designed to capture spatial relationships</p>
-        </center>
+        <img class="tech-img" src="{% static 'img/capsule.png' %}" alt="Capsule-CNN">
+        <h3>Capsule N.N</h3>
+        <p>CapsNets are designed to capture spatial relationships</p>
     </div>
 </section>
 {% endblock %}
