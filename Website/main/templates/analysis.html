@@ -5,13 +5,13 @@
 <section class="input-banner">
     <div class="input-banner-content">
         <h1>Find the intensity of Cyclone in a few clicks!</h1>
-        <form action="" method="post">
+        <form id="upload-form" action="#analysis" method="post" enctype="multipart/form-data">
             {% csrf_token %}
             <div id="upload">
                 <img src="{% static 'img/upload.png' %}" alt="Upload Image">
                 <input type="file" name="image" class="file_upload" id="image" accept="image/png, image/jpeg">
                 <div class="sub-btn">
-                    <button type="submit" class="submit">Submit</button>
+                    <button type="submit" class="submit" onclick="submitForm(event)">Submit</button>
                 </div>
             </div>
             <label for="image">Upload Image</label>
@@ -22,5 +22,12 @@
 <section id="analysis">
     <h2 class="analysis-head">Analysis</h2>
 
+    {% if image_url %}
+    <div id="image-display" class="image-container">
+        <img id="uploaded-image" src="{{ image_url }}" alt="Uploaded Image" onload="fadeInImage()">
+    </div>
+    {% endif %}
+
 </section>
+<script text="text/javascript" src="{% static 'js/analysis.js' %}"></script>
 {% endblock %}

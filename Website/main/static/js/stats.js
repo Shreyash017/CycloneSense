@@ -1,3 +1,7 @@
+// For stats counter in home page
+// Source (for counter logic): https://codingartistweb.com/2021/10/how-to-create-responsive-count-up-animation-with-javascript/
+// Source (for scroll event): https://stackoverflow.com/a/5036892/22150559
+
 let valueDisplays = document.querySelectorAll(".counter");
 let timestart = 4000;
 var target = $(".stats").offset().top;
@@ -24,4 +28,3 @@ var interval = setInterval(function () {
         clearInterval(interval);
     }
 }, 250);
-
