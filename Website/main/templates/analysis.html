@@ -19,15 +19,182 @@
     </div>
 </section>
 
+{% if e0_url %}
 <section id="analysis">
     <h2 class="analysis-head">Analysis</h2>
 
-    {% if image_url %}
-    <div id="image-display" class="image-container">
-        <img id="uploaded-image" src="{{ image_url }}" alt="Uploaded Image" onload="fadeInImage()">
+    <div id="cyclone-type">
+        <!-- <div class="temp"></div>
+        <div class="temp" id="disturbance">
+            <h1>{{ cyclone_type }}</h1>
+        </div>
+        <div class="temp"></div> -->
+        {% if cyclone_type == "Low pressure Area" %}
+            <div class="temp low-pressure"></div>
+            <div class="temp1" id="disturbance1">
+                <h1>{{ cyclone_type }}</h1>
+            </div>
+            <div class="temp low-pressure"></div>
+        {% elif cyclone_type == "Depression" %}
+            <div class="temp depression"></div>
+            <div class="temp1" id="disturbance2">
+                <h1>{{ cyclone_type }}</h1>
+            </div>
+            <div class="temp depression"></div>
+        {% elif cyclone_type == "Deep Depression" %}
+            <div class="temp deep-depression"></div>
+            <div class="temp1" id="disturbance3">
+                <h1>{{ cyclone_type }}</h1>
+            </div>
+            <div class="temp deep-depression"></div>
+        {% elif cyclone_type == "Cyclonic Storm" %}
+            <div class="temp cyclonic-storm"></div>
+            <div class="temp1" id="disturbance4">
+                <h1>{{ cyclone_type }}</h1>
+            </div>
+            <div class="temp cyclonic-storm"></div>
+        {% elif cyclone_type == "Severe Cyclonic Storm" %}
+            <div class="temp severe-cyclonic-storm"></div>
+            <div class="temp1" id="disturbance5">
+                <h1>{{ cyclone_type }}</h1>
+            </div>
+            <div class="temp severe-cyclonic-storm"></div>
+        {% elif cyclone_type == "Very Severe Cyclonic Storm" %}
+            <div class="temp very-severe-cyclonic-storm"></div>
+            <div class="temp1" id="disturbance6">
+                <h1>{{ cyclone_type }}</h1>
+            </div>
+            <div class="temp very-severe-cyclonic-storm"></div>
+        {% elif cyclone_type == "Super Cyclonic Storm" %}
+            <div class="temp super-cyclonic-storm"></div>
+            <div class="temp1" id="disturbance7">
+                <h1>{{ cyclone_type }}</h1>
+            </div>
+            <div class="temp super-cyclonic-storm"></div>
+        {% endif %}
     </div>
+
+
+    <div id="image-display" class="image-container">
+        <div class="img-div">
+            <img class="imgs" src="{{ e0_url }}" alt="Boundary Image" onload="fadeInImage(this)">
+            <h3>Cyclone</h3>
+        </div>
+        <div class="img-div">
+            <img class="imgs" src="{{ e1_url }}" alt="Feature Image" onload="fadeInImage(this)">
+            <h3>Features</h3>
+        </div>
+        <div class="img-div">
+            <img class="imgs" src="{{ e2_url }}" alt="Immediate Location Image" onload="fadeInImage(this)">
+            <h3>Immediate Trajectory</h3>
+        </div>
+    </div>
+
+    <div class="overview">
+        <div class="overview-container">
+            <h3>Overview</h3>
+            <div class="overview-item">
+                <h3>Wind Speed <img class="overview-imgs" src="{% static 'img/wind.png' %}" alt="Wind"> </h3>
+                <h3><strong> {{ result }} kmph </strong></h3>
+            </div>
+            <div class="overview-item">
+                <h3>Immediate Trajectory <img class="overview-imgs" src="{% static 'img/location.png' %}" alt="Compass"> </h3> 
+                <h3><strong> {{ location }} </strong></h3>
+            </div>
+            <div class="jump">
+                <a href="#mitigation"><h3>Mitigation Strategies</h3></a>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="mitigation">
+        <div class="temp1"></div>
+        <div class="temp1" id="mitigation-head">
+            <h1>Mitigation Strategies</h1>
+        </div>
+        <div class="temp1"></div>
+    </div>
+
+    {% if result <= 88 %}
+        <div id="strategies-container1">
+            <div class="strategies-item">
+                <h3>Monitor Weather Updates</h3>
+                <span class="tooltiptext">Stay informed about weather forecasts and warnings issued by official sources.</span>
+            </div>
+            <div class="strategies-item">
+                <h3>Limit Travelling</h3>
+                <span class="tooltiptext">Avoid unnecessary travel to minimize risk and allow emergency services to operate freely.</span>
+            </div>
+            <div class="strategies-item">
+                <h3>Secure your house</h3>
+                <span class="tooltiptext">Bring outdoor furniture and objects inside, board up windows if necessary, and secure loose roof tiles.</span>
+            </div>
+            <div class="strategies-item">
+                <h3>Evacuate if necessary</h3>
+                <span class="tooltiptext">Follow instructions from local authorities regarding evacuation zones and shelters.</span>
+            </div>
+        </div>
+    {% elif result <= 118 %}
+        <div id="strategies-container2">
+            <div class="strategies-item">
+                <h3>Monitor Weather Updates</h3>
+                <span class="tooltiptext">Stay informed about weather forecasts and warnings issued by official sources.</span>
+            </div>
+            <div class="strategies-item">
+                <h3>Secure your home</h3>
+                <span class="tooltiptext">Secure your roof, doors, and windows to withstand strong winds and potential flying debris.</span>
+            </div>
+            <div class="strategies-item">
+                <h3>Prepare for disruptions</h3>
+                <span class="tooltiptext">Stock up on non-perishable food, water, and essential supplies in case of power outages or disruptions.</span>
+            </div>
+            <div class="strategies-item">
+                <h3>Evacuate if necessary</h3>
+                <span class="tooltiptext">Follow instructions from local authorities regarding evacuation zones and shelters.</span>
+            </div>
+        </div>
+        {% elif result > 118 %}
+        <div id="strategies-container3">
+            <div class="strategies-item">
+                <h3>Secure your home</h3>
+                <span class="tooltiptext">Secure your roof, doors, and windows to withstand strong winds and potential flying debris.</span>
+            </div>
+            <div class="strategies-item">
+                <h3>Stay Indoor</h3>
+                <span class="tooltiptext">Stay inside a sturdy room away from windows and doors to minimize risk of injury from flying debris.</span>
+            </div>
+            <div class="strategies-item">
+                <h3>Prepare for disruptions</h3>
+                <span class="tooltiptext">Stock up on non-perishable food, water, and essential supplies in case of power outages or disruptions.</span>
+            </div>
+            <div class="strategies-item">
+                <h3>Immediate evacuation</h3>
+                <span class="tooltiptext">Follow instructions from local authorities immediately and proceed to designated evacuation zones.</span>
+            </div>
+            <div class="strategies-item">
+                <h3>Avoid flood zones</h3>
+                <span class="tooltiptext">Avoid low-lying areas and areas prone to flooding to minimize risk of drowning.</span>
+            </div>
+            <div class="strategies-item">
+                <h3>Monitor Weather Updates</h3>
+                <span class="tooltiptext">Stay informed about weather forecasts and warnings issued by official sources.</span>
+            </div>
+        </div>
     {% endif %}
 
+    <div class="general">
+        <div class="general-container">
+            <h2>General Tips <img class="tip-img" src="{% static 'img/lightbulb.png' %}" alt="Tips"></h2>
+            <ul>
+                <li>Prepare an emergency kit with essentials like <strong>non-perishable food, bottled water, first-aid supplies, a flashlight, batteries, a portable radio, and a whistle. </strong></li>
+                <li>National Emergency Number: <strong>112</strong></li>
+                <li>Follow <strong>instructions from local authorities</strong> regarding evacuation or sheltering in place.</li>
+            </ul>
+        </div>
+    </div>    
 </section>
+{% endif %}
+
 <script text="text/javascript" src="{% static 'js/analysis.js' %}"></script>
 {% endblock %}

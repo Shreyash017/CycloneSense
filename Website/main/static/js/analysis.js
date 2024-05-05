@@ -17,7 +17,8 @@ function submitForm(event) {
 }
 
 // To fade in the image after it is loaded
-function fadeInImage() {
-    var imageContainer = document.querySelector('.image-container');
-    imageContainer.classList.add('loaded');
+function fadeInImage(image) {
+    // var imageContainer = document.querySelector('.imgs');
+    // imageContainer.classList.add('loaded');
+    image.classList.add('loaded');
 }
